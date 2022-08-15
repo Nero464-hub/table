@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="table.css">
+</head>
+<body>
+    <button id="btn" onclick="showPrompt()">Add Row</button>
+    <div id="prompt" class="prompt">
+        <div class="close-div" onclick="closePrompt()"></div>
+        <div class="prompt-content">
+            <span class="close-span" onclick="closePrompt()">&times</span>
+            <div class="prompt-div">
+                <h3>please enter your details</h3>
+                <input type="text" class="inp1" placeholder="Enter your Name" id="inp">
+                <input type="text" class="inp2" placeholder="Enter your Age" id="inp">
+                <input type="text" class="inp3" placeholder="Enter your Gender" id="inp">
+                <div>
+                    <button onclick="handlePrompt(1)">ok</button>
+                    <button onclick="handlePrompt(0)">cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <table class="table">
+        <tr class="tr">
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Action</th>
+        </tr>
+        <!-- <tr>
+            <td><input type="text" value="john" disabled></td>
+            <td><input type="text" value="16" disabled></td>
+            <td><input type="text" value="male" disabled></td>
+            <td class="action">
+                <span class="bi-check"></span>
+                <span class="bi-arrow-up-short"></span>
+                <span class="bi-arrow-down-short"></span>
+                <span class="bi-pencil-square"></span>
+                <span class="bi-x"></span>
+            </td>
+        </tr> -->
+    </table>
+    <script src="table.js"></script>
+</body>
+</html>

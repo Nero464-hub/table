@@ -1,0 +1,105 @@
+body{
+    box-sizing: border-box;
+}
+#prompt{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.prompt > .close-div{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.prompt-content{
+    width: 50%;
+    padding: 30px;
+    border-radius: 8px;
+    background-color: white;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: -100%;
+
+}
+.prompt-div{
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    position: relative;
+    gap: 10px;
+    
+}
+.close-span{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 25px;
+    color: red;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+@keyframes ani {
+    0%{
+        top:-100%
+    }
+    100%{
+        top:0%
+    }
+}
+.animate {
+    animation: ani .5s forwards;
+}
+.prompt-div > h3{
+    text-align: center;
+    font-size: 18px;
+
+}
+.prompt-div > div{
+    display: flex;
+    width: 100%;
+}
+table{
+    gap: 10px;
+    height: fit-content;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+td ,th{
+    text-align: left;
+    padding:8px;
+    border: 1px solid #dddd;
+}
+tr:nth-child(even) {
+    background-color: white;
+  }
+td > input{
+    outline: none;
+    border: none;
+    background-color: white;
+    color: black;
+}
+.action{
+    font-size: 25px;
+    font-weight: bold;
+    display: flex;
+    gap: 10px;
+}
+.action > span{
+    cursor: pointer;
+}
